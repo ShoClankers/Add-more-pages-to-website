@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div><br>
+    <span class="border trans" style="font-size: 40px;">
+        <center>Welcome all to this website</center>
+    </span><br><br>
+    <section>
+        <h2><CENTER>Chinese Cuisine</CENTER></h2>
+        <p>
+            Chinese cuisine includes styles originating from the diverse regions of China, as well as from Chinese people in other parts of the world. The cuisine is known for its variety of flavors, ingredients, and cooking techniques. Some of the most popular Chinese dishes include Peking duck, Kung Pao chicken, sweet and sour pork, dumplings, and fried rice. Chinese cuisine often emphasizes balance and harmony in flavors, textures, and colors, making it a favorite among food enthusiasts worldwide.
+        </p>
+    </section>
+    <section>
+    <img class="mySlides" src="Shrimp_dumplings.png" style="height:350px; width:350px;">
+        <img class="mySlides" src="Fujian.png" style="height:350px; width:350px;">
+            <img class="mySlides" src="Shuizhuniurou.png" style="height:350px; width:350px;">
+            </section>
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 3000); 
+                }
+            </script>
+</html>
